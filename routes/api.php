@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\dummyApi;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get("data/{id?}",[dummyApi::class, 'getData']);
+Route::post("postdata/",[dummyApi::class, 'postData']);
+Route::put("putdata/{id}",[dummyApi::class, 'putData']);
+Route::delete("deletedata/{id}",[dummyApi::class, 'deleteData']);
+
+
+
+
+

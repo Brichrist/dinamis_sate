@@ -49,11 +49,11 @@ Route::get('/deletetestimoni/{id}', [EdittestimoniController::class, 'destroy'])
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/content',[SateController::class, 'index']);
-// Route::get('/',[SateController::class, 'index']);
+Route::get('/',[SateController::class, 'index']);
 
 Route::get('/edit', [SateController::class, 'indexedit']);
 Route::get('/edit/{y}', [SateController::class, 'indexeditscroll']);
